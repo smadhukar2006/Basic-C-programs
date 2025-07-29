@@ -1,0 +1,31 @@
+// Include header file
+#include <iostream>
+#include <string>
+#include <vector>
+
+class GFG
+{
+    // Function to get sum of digits
+    public:
+    static int getSum(int n)
+    {
+        int sum = 0;
+        while (n != 0)
+        {
+            sum = sum + n % 10;
+            n = n / 10;
+        }
+        return sum;
+    }
+    // Driver program
+    static void main(std::vector<std::string> &args)
+    {
+        int n = 687;
+        std::cout << GFG::getSum(n) << std::endl;
+    }
+};
+int main(int argc, char **argv){
+    std::vector<std::string> parameter(argv + 1, argv + argc);
+    GFG::main(parameter); 
+    return 0;
+};
